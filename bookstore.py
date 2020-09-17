@@ -17,7 +17,9 @@ class Book:
 
         self.bookstore = BookStore()
 
-
+    """Save checks if the book has an ID yet, if it does that means it's being called to edit an existing book,
+    but if the book does not have an ID yet that means it hasn't been added to the database and save is being called to
+    create a new book."""
     def save(self):
         if self.id:
             self.bookstore._update_book(self)
