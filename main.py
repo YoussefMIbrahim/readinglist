@@ -14,7 +14,8 @@ def main():
         choice = ui.display_menu_get_choice(menu)
         action = menu.get_action(choice)
         action()
-        if choice == 'Q':
+        #made it so q is no longer case sensetive by always being upper case
+        if choice.upper() == 'Q':
             break
 
 
