@@ -68,9 +68,14 @@ def change_read():
 
 
 def delete_book():
-    book_id = ui.get_book_id()
-    book = store.get_book_by_id(book_id)
-    book.delete()
+    try:
+        book_id = ui.get_book_id()
+        book = store.get_book_by_id(book_id)
+        book.delete()
+    except Exception:
+        print("Error: Book Not Found")
+
+    
     
 
 def quit_program():
