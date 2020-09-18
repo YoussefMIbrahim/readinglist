@@ -7,7 +7,8 @@ def display_menu_get_choice(menu):
      :returns: the user's choice """
     while True:
         print(menu)
-        choice = input('Enter choice? ')
+        # added uppper to make it so Q is no longer case sensetive
+        choice = input('Enter choice? ').upper()
         if menu.is_valid(choice):
             return choice
         else:
