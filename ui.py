@@ -28,10 +28,14 @@ def show_books(books):
     # TODO print a blank line before and after the book list or no books message
 
     if books:
+        print('\n')
         for book in books:
             print(book)
+        print('\n')
     else:
+        print('\n')
         print('No books to display')
+        print('\n')
 
 
 def get_book_info():
