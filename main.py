@@ -70,6 +70,13 @@ def change_read():
         new_read = ui.get_read_value()     
         book.read = new_read 
         book.save()
+
+        if new_read == True:
+            status = "read"
+        else:
+            status = "not read"
+
+        print("You have " + str(status) + " " + str(book.title) + " by " + str(book.author))
     except NameError:
         print('Book is not in list')
 
